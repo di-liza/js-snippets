@@ -1,0 +1,65 @@
+body {
+  color: #2a2a2a;
+  background-color: #e8e8e8;
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1 {
+  color: #2196f3;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+h2 {
+  color: #21cdf3;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  color: #4caf50;
+  padding: 24px;
+}
+
+a {
+  color: #4caf50;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #13e81a;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=veb-index.7b9879e3.css.map */
