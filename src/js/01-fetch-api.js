@@ -1,6 +1,6 @@
 import '../css/common.css';
 import template from '../templates/pokemon-card.hbs';
-// document.body.innerHTML = template();
+import API from './api-service';
 
 const pokemonContainer = document.querySelector('.js-card-container');
 const searchForm = document.querySelector('.js-search-form');
@@ -12,16 +12,10 @@ function onSearchForm(e) {
   const form = e.currentTarget;
   const swarchQuery = form.elements.query.value;
 
-  fetchPokemonById(swarchQuery)
+  API.fetchPokemonById(swarchQuery)
     .then(renderPokemonCard)
     .catch(onError)
     .finally(form.reset());
-}
-
-function fetchPokemonById(pokemonId) {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`).then(r =>
-    r.json(),
-  );
 }
 
 function renderPokemonCard(pokemon) {

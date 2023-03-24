@@ -561,7 +561,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _commonCss = require("../css/common.css");
 var _pokemonCardHbs = require("../templates/pokemon-card.hbs");
 var _pokemonCardHbsDefault = parcelHelpers.interopDefault(_pokemonCardHbs);
-// document.body.innerHTML = template();
+var _apiService = require("./api-service");
+var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
 const pokemonContainer = document.querySelector(".js-card-container");
 const searchForm = document.querySelector(".js-search-form");
 searchForm.addEventListener("submit", onSearchForm);
@@ -569,10 +570,7 @@ function onSearchForm(e) {
     e.preventDefault();
     const form = e.currentTarget;
     const swarchQuery = form.elements.query.value;
-    fetchPokemonById(swarchQuery).then(renderPokemonCard).catch(onError).finally(form.reset());
-}
-function fetchPokemonById(pokemonId) {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`).then((r)=>r.json());
+    (0, _apiServiceDefault.default).fetchPokemonById(swarchQuery).then(renderPokemonCard).catch(onError).finally(form.reset());
 }
 function renderPokemonCard(pokemon) {
     const markup = (0, _pokemonCardHbsDefault.default)(pokemon);
@@ -608,7 +606,7 @@ function onError(error) {
  //     .join('');
  // }
 
-},{"../css/common.css":"97fCK","../templates/pokemon-card.hbs":"7BIcD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97fCK":[function() {},{}],"7BIcD":[function(require,module,exports) {
+},{"../css/common.css":"97fCK","../templates/pokemon-card.hbs":"7BIcD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./api-service":"RTflJ"}],"97fCK":[function() {},{}],"7BIcD":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12055,6 +12053,16 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["hYkko","3tpAi"], "3tpAi", "parcelRequire10fc")
+},{}],"RTflJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function fetchPokemonById(pokemonId) {
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`).then((r)=>r.json());
+}
+exports.default = {
+    fetchPokemonById
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hYkko","3tpAi"], "3tpAi", "parcelRequire10fc")
 
 //# sourceMappingURL=01-fetch-api.f3c95317.js.map
