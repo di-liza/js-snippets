@@ -557,8 +557,94 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"3tpAi":[function(require,module,exports) {
+// const pokemonTmp = require("../templates/pokemon-card.hbs");
+// const Handlebars = require("handlebars");
+// const pokemonTp = Handlebars.compile(pokemonTmp);
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _commonCss = require("../css/common.css");
+var _apiService = require("./api-service");
+var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
+const pokemonContainer = document.querySelector(".js-card-container");
+const searchForm = document.querySelector(".js-search-form");
+searchForm.addEventListener("submit", onSearch);
+function onSearch(e) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const searchQuery = form.elements.query.value;
+    (0, _apiServiceDefault.default).fetchPokemonById(searchQuery).then(renderPokemonCard).catch(onFetchError).finally(()=>{
+        form.reset();
+    });
+}
+// function fetchPokemonById(pokemonId) {
+//   return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`).then((r) =>
+//     r.json()
+//   );
+// }
+function renderPokemonCard(pokemon) {
+    const markup = `<div class="card">
+    <div class="card-img-top">
+        <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+    </div>
+    <div class="card-body">
+        <h2 class="card-title">Имя: ${pokemon.name}</h2>
+        <p class="card-text">Вес: ${pokemon.weight}</p>
+        <p class="card-text">Рост: ${pokemon.height}</p>
+        <p class="card-text"><b>Умения</b></p>
+        <ul class="list-group"></ul>
+       ${getPokemonAbilityName(pokemon)}
+        </ul>
+    </div>
+</div>`;
+    pokemonContainer.innerHTML = markup;
+}
+function getPokemonAbilityName(pokemon) {
+    return pokemon.abilities.map((ability)=>`<li class="list-group-item">${ability.ability.name}</li>`).join("");
+}
+function onFetchError(error) {
+    alert("Что то пошло не так!");
+}
 
-},{"../css/common.css":"97fCK"}],"97fCK":[function() {},{}]},["hYkko","3tpAi"], "3tpAi", "parcelRequire10fc")
+},{"../css/common.css":"97fCK","./api-service":"RTflJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97fCK":[function() {},{}],"RTflJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
+function fetchPokemonById(pokemonId) {
+    return fetch(`${BASE_URL}${pokemonId}/`).then((r)=>r.json());
+}
+exports.default = {
+    fetchPokemonById
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["hYkko","3tpAi"], "3tpAi", "parcelRequire10fc")
 
 //# sourceMappingURL=01-fetch-api.f3c95317.js.map
