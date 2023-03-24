@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"2MJT7":[function(require,module,exports) {
+})({"3Drzi":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "900a3bc6b9ce0a5c";
+module.bundle.HMR_BUNDLE_ID = "9a3c6a29a4560687";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,8 +556,8 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"jtrPQ":[function(require,module,exports) {
+},{}],"2lTso":[function(require,module,exports) {
 
-},{}]},["2MJT7","jtrPQ"], "jtrPQ", "parcelRequire10fc")
+},{}]},["3Drzi","2lTso"], "2lTso", "parcelRequire10fc")
 
-//# sourceMappingURL=pokemon-card.b9ce0a5c.js.map
+//# sourceMappingURL=02-cors.a4560687.js.map
