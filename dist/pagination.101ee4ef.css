@@ -181,4 +181,20 @@ script {
   font-size: 1.2rem;
 }
 
+.show-more-photo {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  transition: all .3s ease-in-out;
+  display: block;
+}
+
+.show-more-photo:hover {
+  background-color: #6d4c26;
+}
+
 /*# sourceMappingURL=pagination.101ee4ef.css.map */

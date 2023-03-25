@@ -1,0 +1,78 @@
+body {
+  background-color: #232323;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  flex-basis: 200px;
+}
+
+.photo-link {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.photo-link img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+/* стили для кнопок */
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #cf3131;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff5e5e;
+}
+
+/* стили для ссылок */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}

@@ -17,6 +17,7 @@ const loadMoreBtn = new LoadMoreBtn({
 // сделали екземпляр класса NewsApiService
 // что бы получить доступ к свойствам и методам
 const newsApiService = new NewsApiService();
+console.log('newsApiService:', newsApiService);
 
 const searchForm = document.querySelector('.js-search-form');
 const searchBtn = document.querySelector('.mb-2');

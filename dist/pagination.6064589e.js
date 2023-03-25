@@ -573,6 +573,7 @@ var _articlesHbsDefault = parcelHelpers.interopDefault(_articlesHbs);
 // сделали екземпляр класса NewsApiService
 // что бы получить доступ к свойствам и методам
 const newsApiService = new (0, _newsServiceDefault.default)();
+console.log("newsApiService:", newsApiService);
 const searchForm = document.querySelector(".js-search-form");
 const searchBtn = document.querySelector(".mb-2");
 // const getMoreBtn = document.querySelector('[data-action="load-more"]');

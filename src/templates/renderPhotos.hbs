@@ -1,10 +1,22 @@
-
+<li>
+    <a href="{{img_src}}" class="photo-link"><img src="{{img_src}}" alt="Photo - {{id}}" width=160 /></a>
+    <h3>Made photo by {{rover.name}}</h3>
+    <p>Photo date: {{earth_date}}</p>
+    <p>Camera: {{camera.full_name}}</p>
+</li>
+{{!-- 
     <div class="gallery-item">
-        <img src="{{img_src}}" alt="Photo 1" />
-        <div class="image-overlay">
-            <p>Date: {{earth_date}}</p>
-            <p class="photo-id">Id: {{id}}</p>
-            <p class="photo-camera">Camera name: {{camera.name}}</p>
-            <p class="photo-made">Made by {{rover.name}}</p>
-        </div>
-    </div>
+        <a href="{{id}}">
+            <img src="{{img_src}}" alt="Photo 1" />
+            <div class="image-overlay">
+                <p>Date: {{earth_date}}</p>
+                <p class="photo-id">Id: {{id}}</p>
+                <p class="photo-camera">Camera name: {{camera.name}}</p>
+                <p class="photo-made">Made by {{rover.name}}</p>
+            </div>
+        </a>
+    </div> --}}
+
+
+    {{!-- <a href="{{id}}"><img src="{{img_src}}" alt="" title="" /></a>
+    <a href="{{id}}"><img src="{{img_src}}" alt="" title="Beautiful Image" /></a> --}}
