@@ -119,4 +119,66 @@ script {
   text-decoration: none;
 }
 
+.search-photo {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  transition: all .3s ease-in-out;
+  display: block;
+}
+
+.search-photo:hover {
+  background-color: #6d4c26;
+}
+
+.container {
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  display: grid;
+}
+
+.gallery-item {
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #00000080;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: opacity .3s ease-in-out;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-overlay p {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
 /*# sourceMappingURL=pagination.101ee4ef.css.map */

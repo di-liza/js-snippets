@@ -23,6 +23,7 @@
     "parcel-reporter-clean-dist": "^1.0.4"
   },
   "dependencies": {
+    "notiflix": "^3.2.6",
     "parcel-transformer-hbs": "^1.0.4"
   }
 }
