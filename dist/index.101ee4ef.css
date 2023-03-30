@@ -1,0 +1,53 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2a2a2a;
+  background-color: #e8e8e8;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  color: #2196f3;
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+ul {
+  width: 80%;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+script {
+  display: none;
+}
+
+/*# sourceMappingURL=index.101ee4ef.css.map */
