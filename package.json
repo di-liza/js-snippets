@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./src/index.html",
     "start": "npx parcel ./src/index.html",
     "server": "json-server --watch db.json"
   },
@@ -13,7 +14,7 @@
     "url": "git+https://github.com/di-liza/js-snippets.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Liza Diachenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/di-liza/js-snippets/issues"

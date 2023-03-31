@@ -1,4 +1,4 @@
-// import './js/r - get';
-// import './js/u - patch';
-// import './js/c - post';
-// import './js/d - delete';
+// import './crud-js/r - get';
+// import './crud-js/u - patch.js';
+// import './crud-js/c - post.js';
+// import './crud-js/d - delete.js';
