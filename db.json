@@ -63,6 +63,15 @@
       ],
       "rating": 7,
       "id": 8
+    },
+    {
+      "title": "Wonderfool Land",
+      "author": "Anna Mari Seymur",
+      "genres": [
+        "fantasy"
+      ],
+      "rating": 10,
+      "id": 9
     }
   ],
   "users": []

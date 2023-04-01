@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./icons/skyscrapers-usa.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <title>Gallery</title>
+  </head>
+  <body>
+    <p><a href="./index.html">Home</a></p>
+
+    <section class="gallery-section">
+      <div class="container">
+        <form class="search-form js-search-form">
+          <input type="text" name="user-search-query" class="search-input" />
+          <button type="submit" class="search-btn">search</button>
+        </form>
+        <ul class="gallery js-gallery list"></ul>
+        <div class="target-element"></div>
+        <button type="button" class="load-more js-load-more is-hidden">
+          Load more
+        </button>
+      </div>
+    </section>
+
+    <script src="./js-vebs-10-11/gallery.js" type="module"></script>
+  </body>
+</html>

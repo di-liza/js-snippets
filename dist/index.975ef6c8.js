@@ -561,6 +561,7 @@ function hmrAccept(bundle, id) {
 // import './crud-js/u - patch.js';
 // import './crud-js/c - post.js';
 // import './crud-js/d - delete.js';
+// import './js-async-functions/async-crud';
 
 },{}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequire10fc")
 

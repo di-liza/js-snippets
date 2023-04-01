@@ -557,6 +557,37 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"ifinn":[function(require,module,exports) {
+function getFruit(name) {
+    const fruits = {
+        strawberry: "\uD83C\uDF53",
+        kiwi: "\uD83E\uDD5D ",
+        apple: "\uD83C\uDF4E",
+        banana: "\uD83C\uDF4C"
+    };
+    return new Promise((resolve)=>setTimeout(()=>resolve(fruits[name]), 500));
+}
+console.log(1);
+async function makeSmothie() {
+    try {
+        console.time("makeSmothie");
+        const apple = getFruit("apple");
+        const kiwi = getFruit("kiwi");
+        const banana = getFruit("banana");
+        const fruits = await Promise.all([
+            apple,
+            kiwi,
+            banana
+        ]);
+        console.log("fruits:", fruits);
+        console.timeEnd("makeSmothie");
+        return fruits;
+    } catch (error) {
+        console.log(error);
+    }
+}
+console.log(2);
+makeSmothie().then(console.log);
+console.log(3);
 
 },{}]},["1V6y3","ifinn"], "ifinn", "parcelRequire10fc")
 
