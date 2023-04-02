@@ -19,12 +19,11 @@ function handleSearchFormSubmit(event) {
 
 async function getPhotos() {
   try {
-    const data = await unsplashAPI.fethPhoto();
+    const { data } = await unsplashAPI.fethPhoto();
     console.log(data);
-    renderGalleryMarkup(data);
+    refs.gallery.innerHTML = galleryCardTMPL(data.results);
     hideLoadMoreBtn(data);
     refs.loadMoreBtn.classList.remove('is-hidden');
-    return data;
   } catch (error) {
     console.log('error:', error);
   }
@@ -33,20 +32,12 @@ async function getPhotos() {
 async function handleLoadmoreBtnClick() {
   unsplashAPI.incrementPage();
   try {
-    const data = await unsplashAPI.fethPhoto();
+    const { data } = await unsplashAPI.fethPhoto();
     hideLoadMoreBtn(data);
-    renderLoadMoreGalleryMarkup(data);
-    return data;
+    refs.gallery.insertAdjacentHTML('beforeend', galleryCardTMPL(data.results));
   } catch (error) {
     console.log(error);
   }
-}
-
-function renderGalleryMarkup(data) {
-  refs.gallery.innerHTML = galleryCardTMPL(data.results);
-}
-function renderLoadMoreGalleryMarkup(data) {
-  refs.gallery.insertAdjacentHTML('beforeend', galleryCardTMPL(data.results));
 }
 
 function hideLoadMoreBtn(data) {
